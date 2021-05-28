@@ -6,7 +6,7 @@
 	<parent>
 		<groupId>com.github.tadukoo.maven</groupId>
 		<artifactId>TadukooMavenParent</artifactId>
-		<version>0.1-Alpha-SNAPSHOT</version>
+		<version>0.1-Alpha</version>
 	</parent>
 	<artifactId>TadukooMavenBasePOM</artifactId>
 	<packaging>pom</packaging>
@@ -155,8 +155,20 @@
 			</plugins>
 		</pluginManagement>
 		<plugins>
+			<!-- Maven Plugins -->
 			<plugin>
-				<artifactId>${maven.gpg.artifactID}</artifactId>
+				<artifactId>${maven.source.artifactID}</artifactId>
+				<inherited>true</inherited>
+			</plugin>
+			<plugin>
+				<artifactId>${maven.javadoc.artifactID}</artifactId>
+				<inherited>true</inherited>
+			</plugin>
+			<!-- JaCoCo for Code Coverage -->
+			<plugin>
+				<groupId>${jacoco.groupID}</groupId>
+				<artifactId>${jacoco.artifactID}</artifactId>
+				<inherited>true</inherited>
 			</plugin>
 		</plugins>
 	</build>

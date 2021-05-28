@@ -6,9 +6,10 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.github.tadukoo.maven</groupId>
 	<artifactId>TadukooMavenParent</artifactId>
-	<version>0.1-Alpha-SNAPSHOT</version>
+	<version>0.1-Alpha</version>
 	<packaging>pom</packaging>
 	<name>${project.artifactId}</name>
+	<description>Maven poms and archetypes for Tadukooverse projects</description>
 	<url>${github.url.https}</url>
 	<modules>
 		<module>TadukooMavenBasePOM</module>
@@ -78,12 +79,22 @@
 				<plugin>
 					<artifactId>${maven.gpg.artifactID}</artifactId>
 					<version>${maven.gpg.version}</version>
+					<executions>
+						<execution>
+							<id>sign-artifacts</id>
+							<phase>verify</phase>
+							<goals>
+								<goal>sign</goal>
+							</goals>
+						</execution>
+					</executions>
 				</plugin>
 			</plugins>
 		</pluginManagement>
 		<plugins>
 			<plugin>
 				<artifactId>${maven.gpg.artifactID}</artifactId>
+				<inherited>true</inherited>
 			</plugin>
 		</plugins>
 	</build>
