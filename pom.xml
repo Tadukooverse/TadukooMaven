@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
 		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+		 child.project.url.inherit.append.path="false">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.github.tadukoo.maven</groupId>
 	<artifactId>TadukooMavenParent</artifactId>
 	<version>0.1-Alpha-SNAPSHOT</version>
 	<packaging>pom</packaging>
+	<name>${project.artifactId}</name>
+	<url>${github.url.https}</url>
 	<modules>
 		<module>TadukooMavenBasePOM</module>
 	</modules>
@@ -15,8 +18,40 @@
 			<name>Logan Ferree (Tadukoo)</name>
 		</developer>
 	</developers>
+	<licenses>
+		<license>
+			<name>${license.name}</name>
+			<url>${license.url}</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+	<scm child.scm.connection.inherit.append.path="false"
+		 child.scm.developerConnection.inherit.append.path="false"
+		 child.scm.url.inherit.append.path="false">
+		<url>${github.url.https}</url>
+		<connection>
+			scm:git:git://${github.url}.git
+		</connection>
+		<developerConnection>
+			scm:git:${github.url.ssh}.git
+		</developerConnection>
+	</scm>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		
+		<!-- Basic Info -->
+		<shortName>TadukooMaven</shortName>
+		
+		<!-- GitHub Info -->
+		<github.account>Tadukooverse</github.account>
+		<github.project>${shortName}</github.project>
+		<github.url>github.com/${github.account}/${github.project}</github.url>
+		<github.url.https>https://${github.url}</github.url.https>
+		<github.url.ssh>ssh://git@github.com:${github.account}/${github.project}</github.url.ssh>
+		
+		<!-- License Info -->
+		<license.name>MIT License</license.name>
+		<license.url>${github.url.https}/blob/master/LICENSE</license.url>
 		
 		<!-- Maven Versions -->
 		<maven.archetype-packaging-version>3.2.0</maven.archetype-packaging-version>
