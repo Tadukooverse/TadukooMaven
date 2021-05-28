@@ -1,2 +1,9 @@
+.settings/
+.apt_generated/
+.classpath
+.project
+.factorypath
+.idea/
 *.iml
-/.idea/
+target/
+pom.xml.versionsBackup
