@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<artifactId>TadukooMavenBasePOM</artifactId>
+		<groupId>com.github.tadukoo.maven</groupId>
+		<version>1.0-SNAPSHOT</version>
+	</parent>
+	<artifactId>TadukooMavenLibraryPOM</artifactId>
+	<packaging>pom</packaging>
+	<properties>
+		<!-- Tadukoo Util Versions -->
+		<tadukoo.util.version>0.5-Beta-SNAPSHOT</tadukoo.util.version>
+		<tadukoo.util.functions.version>${tadukoo.util.version}</tadukoo.util.functions.version>
+		<tadukoo.util.lang.version>${tadukoo.util.version}</tadukoo.util.lang.version>
+		<tadukoo.util.util.version>${tadukoo.util.version}</tadukoo.util.util.version>
+		
+		<!-- Tadukoo Util Info -->
+		<tadukoo.util.groupID>com.github.tadukoo.util</tadukoo.util.groupID>
+		<tadukoo.util.functions.artifactID>TadukooFunctions</tadukoo.util.functions.artifactID>
+		<tadukoo.util.lang.artifactID>TadukooLang</tadukoo.util.lang.artifactID>
+		<tadukoo.util.util.artifactID>TadukooUtil</tadukoo.util.util.artifactID>
+	</properties>
+	<dependencyManagement>
+		<dependencies>
+			<!-- Tadukoo Functions -->
+			<dependency>
+				<groupId>${tadukoo.util.groupID}</groupId>
+				<artifactId>${tadukoo.util.functions.artifactID}</artifactId>
+				<version>${tadukoo.util.functions.version}</version>
+			</dependency>
+			<!-- Tadukoo Lang -->
+			<dependency>
+				<groupId>${tadukoo.util.groupID}</groupId>
+				<artifactId>${tadukoo.util.lang.artifactID}</artifactId>
+				<version>${tadukoo.util.lang.version}</version>
+			</dependency>
+			<!-- Tadukoo Util -->
+			<dependency>
+				<groupId>${tadukoo.util.groupID}</groupId>
+				<artifactId>${tadukoo.util.util.artifactID}</artifactId>
+				<version>${tadukoo.util.util.version}</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>${maven.gpg.artifactID}</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+</project>

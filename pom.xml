@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.github.tadukoo.maven</groupId>
+	<artifactId>TadukooMavenParent</artifactId>
+	<version>1.0-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<modules>
+		<module>TadukooMavenBasePOM</module>
+	</modules>
+	<developers>
+		<developer>
+			<name>Logan Ferree (Tadukoo)</name>
+		</developer>
+	</developers>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		
+		<!-- Maven Versions -->
+		<maven.archetype-packaging-version>3.2.0</maven.archetype-packaging-version>
+		<maven.gpg.version>3.0.1</maven.gpg.version>
+		
+		<!-- Maven Info -->
+		<maven.archetype-packaging.groupID>org.apache.maven.archetype</maven.archetype-packaging.groupID>
+		<maven.archetype-packaging.artifactID>archetype-packaging</maven.archetype-packaging.artifactID>
+		<maven.gpg.artifactID>maven-gpg-plugin</maven.gpg.artifactID>
+	</properties>
+	<distributionManagement>
+		<snapshotRepository>
+			<id>ossrh</id>
+			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
+		</snapshotRepository>
+		<repository>
+			<id>ossrh</id>
+			<url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+		</repository>
+	</distributionManagement>
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<artifactId>${maven.gpg.artifactID}</artifactId>
+					<version>${maven.gpg.version}</version>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+		<plugins>
+			<plugin>
+				<artifactId>${maven.gpg.artifactID}</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+</project>
