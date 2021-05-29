@@ -6,7 +6,7 @@
 	<parent>
 		<artifactId>TadukooMavenBasePOM</artifactId>
 		<groupId>com.github.tadukoo.maven</groupId>
-		<version>0.2-Alpha-SNAPSHOT</version>
+		<version>0.2-Alpha</version>
 	</parent>
 	<artifactId>TadukooMavenLibraryPOM</artifactId>
 	<packaging>pom</packaging>
