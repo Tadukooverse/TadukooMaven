@@ -12,7 +12,7 @@
 	<packaging>pom</packaging>
 	<properties>
 		<!-- Tadukoo Parsing Versions -->
-		<tadukoo.parsing.version>0.3.1-Alpha-SNAPSHOT</tadukoo.parsing.version>
+		<tadukoo.parsing.version>0.3.1-Alpha</tadukoo.parsing.version>
 		<tadukoo.parsing.parsing.version>${tadukoo.parsing.version}</tadukoo.parsing.parsing.version>
 		<tadukoo.parsing.json.version>${tadukoo.parsing.version}</tadukoo.parsing.json.version>
 		<tadukoo.parsing.fileformat.version>${tadukoo.parsing.version}</tadukoo.parsing.fileformat.version>

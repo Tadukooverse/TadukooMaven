@@ -23,6 +23,12 @@ Tadukooverse. It extends Tadukoo Maven Base POM, providing the dependencies
 for 
 [Tadukoo Parsing](https://tadukooverse.github.io/projects/TadukooParsing.html).
 
+#### Tadukoo Maven Web Services POM
+Tadukoo Maven Web Services POM is the base POM to be used by web services 
+libraries in Tadukooverse. It extends Tadukoo Maven Base POM, providing the 
+dependencies for 
+[Tadukoo Web Services](https://tadukooverse.github.io/projects/TadukooWebServices.html)
+
 ## Current Plans
 Check out the [project page](https://tadukooverse.github.io/projects/TadukooMaven.html) 
 for information about current plans for Tadukoo Maven.
