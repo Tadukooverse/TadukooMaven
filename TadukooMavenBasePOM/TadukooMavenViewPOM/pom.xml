@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<artifactId>TadukooMavenBasePOM</artifactId>
+		<groupId>com.github.tadukoo.maven</groupId>
+		<version>0.2-Alpha-SNAPSHOT</version>
+	</parent>
+	<artifactId>TadukooMavenViewPOM</artifactId>
+	<packaging>pom</packaging>
+	<properties>
+		<!-- Tadukoo View Versions -->
+		<tadukoo.view.version>0.3.3-Alpha</tadukoo.view.version>
+		<tadukoo.view.components.version>${tadukoo.view.version}</tadukoo.view.components.version>
+		<tadukoo.view.form.version>${tadukoo.view.version}</tadukoo.view.form.version>
+		<tadukoo.view.lookandfeel.version>${tadukoo.view.version}</tadukoo.view.lookandfeel.version>
+		<tadukoo.view.view.version>${tadukoo.view.version}</tadukoo.view.view.version>
+		
+		<!-- Tadukoo View Info -->
+		<tadukoo.view.groupID>com.github.tadukoo.view</tadukoo.view.groupID>
+		<tadukoo.view.components.artifactID>TadukooComponents</tadukoo.view.components.artifactID>
+		<tadukoo.view.form.artifactID>TadukooForm</tadukoo.view.form.artifactID>
+		<tadukoo.view.lookandfeel.artifactID>TadukooLookAndFeel</tadukoo.view.lookandfeel.artifactID>
+		<tadukoo.view.view.aritfactID>TadukooView</tadukoo.view.view.aritfactID>
+	</properties>
+	<dependencyManagement>
+		<dependencies>
+			<!-- Tadukoo Components -->
+			<dependency>
+				<groupId>${tadukoo.view.groupID}</groupId>
+				<artifactId>${tadukoo.view.components.artifactID}</artifactId>
+				<version>${tadukoo.view.components.version}</version>
+			</dependency>
+			<!-- Tadukoo Form -->
+			<dependency>
+				<groupId>${tadukoo.view.groupID}</groupId>
+				<artifactId>${tadukoo.view.form.artifactID}</artifactId>
+				<version>${tadukoo.view.form.version}</version>
+			</dependency>
+			<!-- Tadukoo Look & Feel -->
+			<dependency>
+				<groupId>${tadukoo.view.groupID}</groupId>
+				<artifactId>${tadukoo.view.lookandfeel.artifactID}</artifactId>
+				<version>${tadukoo.view.lookandfeel.version}</version>
+			</dependency>
+			<!-- Tadukoo View -->
+			<dependency>
+				<groupId>${tadukoo.view.groupID}</groupId>
+				<artifactId>${tadukoo.view.view.aritfactID}</artifactId>
+				<version>${tadukoo.view.view.version}</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+</project>

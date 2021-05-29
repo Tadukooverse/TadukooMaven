@@ -6,6 +6,8 @@ Maven poms and archetypes for Tadukooverse projects.
     * [Tadukoo Maven Base POM](#tadukoo-maven-base-pom)
       * [Tadukoo Maven Library POM](#tadukoo-maven-library-pom)
       * [Tadukoo Maven Parsing POM](#tadukoo-maven-parsing-pom)
+      * [Tadukoo Maven Web Service POM](#tadukoo-maven-web-service-pom)
+      * [Tadukoo Maven View POM](#tadukoo-maven-view-pom)
 * [Current Plans](#current-plans)
 
 ## Modules
@@ -23,11 +25,17 @@ Tadukooverse. It extends Tadukoo Maven Base POM, providing the dependencies
 for 
 [Tadukoo Parsing](https://tadukooverse.github.io/projects/TadukooParsing.html).
 
-#### Tadukoo Maven Web Services POM
-Tadukoo Maven Web Services POM is the base POM to be used by web services 
+#### Tadukoo Maven Web Service POM
+Tadukoo Maven Web Service POM is the base POM to be used by web services 
 libraries in Tadukooverse. It extends Tadukoo Maven Base POM, providing the 
 dependencies for 
 [Tadukoo Web Services](https://tadukooverse.github.io/projects/TadukooWebServices.html)
+
+#### Tadukoo Maven View POM
+Tadukoo Maven View POM is the base POM to be used by libraries or programs using 
+view components in Tadukooverse. It extends Tadukoo Maven Base POM, providing 
+the dependencies for 
+[Tadukoo View](https://tadukooverse.github.io/projects/TadukooView.html)
 
 ## Current Plans
 Check out the [project page](https://tadukooverse.github.io/projects/TadukooMaven.html) 
