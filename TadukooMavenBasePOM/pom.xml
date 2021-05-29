@@ -6,12 +6,13 @@
 	<parent>
 		<groupId>com.github.tadukoo.maven</groupId>
 		<artifactId>TadukooMavenParent</artifactId>
-		<version>0.1-Alpha</version>
+		<version>0.2-Alpha-SNAPSHOT</version>
 	</parent>
 	<artifactId>TadukooMavenBasePOM</artifactId>
 	<packaging>pom</packaging>
 	<modules>
 		<module>TadukooMavenLibraryPOM</module>
+		<module>TadukooMavenParsingPOM</module>
 	</modules>
 	<properties>
 		<!-- Directories -->
