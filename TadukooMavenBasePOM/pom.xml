@@ -6,7 +6,7 @@
 	<parent>
 		<groupId>com.github.tadukoo.maven</groupId>
 		<artifactId>TadukooMavenParent</artifactId>
-		<version>0.4-Alpha-SNAPSHOT</version>
+		<version>0.3.1-Alpha-SNAPSHOT</version>
 	</parent>
 	<artifactId>TadukooMavenBasePOM</artifactId>
 	<packaging>pom</packaging>
@@ -26,13 +26,13 @@
 		<directory.eclipse.annotationprocessing>.apt_generated</directory.eclipse.annotationprocessing>
 		
 		<!-- Java and JUnit Versions -->
-		<java.version>16</java.version>
-		<junit.jupiter.version>5.7.2</junit.jupiter.version>
-		<junit.platform.version>1.7.2</junit.platform.version>
+		<java.version>17</java.version>
+		<junit.jupiter.version>5.8.1</junit.jupiter.version>
+		<junit.platform.version>1.8.1</junit.platform.version>
 		
 		<!-- Maven Plugin Versions -->
 		<maven.compiler.version>3.8.1</maven.compiler.version>
-		<maven.javadoc.version>3.3.0</maven.javadoc.version>
+		<maven.javadoc.version>3.3.1</maven.javadoc.version>
 		<maven.source.version>3.2.1</maven.source.version>
 		<!-- Note: 3.0.0-M5 has an issue where it doesn't run JUnit tests, hence using M4 -->
 		<maven.surefire.version>3.0.0-M4</maven.surefire.version>
@@ -42,7 +42,7 @@
 		<nexus-staging.version>1.6.8</nexus-staging.version>
 		
 		<!-- Tadukoo JUnit Versions -->
-		<tadukoo.junit.version>0.1-Alpha</tadukoo.junit.version>
+		<tadukoo.junit.version>0.1.1-Alpha</tadukoo.junit.version>
 		<tadukoo.junit.junit.version>${tadukoo.junit.version}</tadukoo.junit.junit.version>
 		
 		<!-- JUnit Info -->

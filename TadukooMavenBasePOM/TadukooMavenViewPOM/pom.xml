@@ -6,13 +6,13 @@
 	<parent>
 		<artifactId>TadukooMavenBasePOM</artifactId>
 		<groupId>com.github.tadukoo.maven</groupId>
-		<version>0.4-Alpha-SNAPSHOT</version>
+		<version>0.3.1-Alpha-SNAPSHOT</version>
 	</parent>
 	<artifactId>TadukooMavenViewPOM</artifactId>
 	<packaging>pom</packaging>
 	<properties>
 		<!-- Tadukoo View Versions -->
-		<tadukoo.view.version>0.3.3-Alpha</tadukoo.view.version>
+		<tadukoo.view.version>0.3.4-Alpha</tadukoo.view.version>
 		<tadukoo.view.components.version>${tadukoo.view.version}</tadukoo.view.components.version>
 		<tadukoo.view.form.version>${tadukoo.view.version}</tadukoo.view.form.version>
 		<tadukoo.view.lookandfeel.version>${tadukoo.view.version}</tadukoo.view.lookandfeel.version>
