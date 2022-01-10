@@ -6,7 +6,7 @@
 	<parent>
 		<groupId>com.github.tadukoo.maven</groupId>
 		<artifactId>TadukooMavenParent</artifactId>
-		<version>0.3.1-Alpha</version>
+		<version>0.4-Alpha-SNAPSHOT</version>
 	</parent>
 	<artifactId>TadukooMavenBasePOM</artifactId>
 	<packaging>pom</packaging>
@@ -41,10 +41,6 @@
 		<jacoco.version>0.8.7</jacoco.version>
 		<nexus-staging.version>1.6.8</nexus-staging.version>
 		
-		<!-- Tadukoo JUnit Versions -->
-		<tadukoo.junit.version>0.1.1-Alpha</tadukoo.junit.version>
-		<tadukoo.junit.junit.version>${tadukoo.junit.version}</tadukoo.junit.junit.version>
-		
 		<!-- JUnit Info -->
 		<junit.jupiter.groupID>org.junit.jupiter</junit.jupiter.groupID>
 		<junit.jupiter.artifactID>junit-jupiter-engine</junit.jupiter.artifactID>
@@ -62,10 +58,6 @@
 		<jacoco.artifactID>jacoco-maven-plugin</jacoco.artifactID>
 		<nexus-staging.groupID>org.sonatype.plugins</nexus-staging.groupID>
 		<nexus-staging.artifactID>nexus-staging-maven-plugin</nexus-staging.artifactID>
-		
-		<!-- Tadukoo JUnit Info -->
-		<tadukoo.junit.groupID>com.github.tadukoo.junit</tadukoo.junit.groupID>
-		<tadukoo.junit.junit.artifactID>TadukooJUnit</tadukoo.junit.junit.artifactID>
 	</properties>
 	<dependencyManagement>
 		<dependencies>
@@ -80,13 +72,6 @@
 				<groupId>${junit.platform.groupID}</groupId>
 				<artifactId>${junit.platform.artifactID}</artifactId>
 				<version>${junit.platform.version}</version>
-				<scope>test</scope>
-			</dependency>
-			<!-- Tadukoo JUnit Dependencies -->
-			<dependency>
-				<groupId>${tadukoo.junit.groupID}</groupId>
-				<artifactId>${tadukoo.junit.junit.artifactID}</artifactId>
-				<version>${tadukoo.junit.junit.version}</version>
 				<scope>test</scope>
 			</dependency>
 		</dependencies>
