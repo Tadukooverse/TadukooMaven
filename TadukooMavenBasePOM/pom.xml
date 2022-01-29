@@ -11,11 +11,7 @@
 	<artifactId>TadukooMavenBasePOM</artifactId>
 	<packaging>pom</packaging>
 	<modules>
-		<module>TadukooMavenLibraryPOM</module>
-		<module>TadukooMavenParsingPOM</module>
-		<module>TadukooMavenWebServicePOM</module>
-		<module>TadukooMavenViewPOM</module>
-		<module>TadukooMavenProgramPOM</module>
+		<module>TadukooMavenJUnitPOM</module>
 	</modules>
 	<properties>
 		<!-- Directories -->
