@@ -15,6 +15,7 @@
 		<module>TadukooMavenParsingPOM</module>
 		<module>TadukooMavenWebServicePOM</module>
 		<module>TadukooMavenViewPOM</module>
+		<module>TadukooMavenFormPOM</module>
 		<module>TadukooMavenProgramPOM</module>
 	</modules>
 	<properties>

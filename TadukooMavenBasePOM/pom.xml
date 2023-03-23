@@ -32,6 +32,7 @@
 		<maven.source.version>3.2.1</maven.source.version>
 		<!-- Note: 3.0.0-M5 has an issue where it doesn't run JUnit tests, hence using M4 -->
 		<maven.surefire.version>3.0.0-M4</maven.surefire.version>
+		<maven.jar.version>3.3.0</maven.jar.version>
 		
 		<!-- Other Plugin Versions -->
 		<jacoco.version>0.8.7</jacoco.version>
@@ -48,6 +49,7 @@
 		<maven.javadoc.artifactID>maven-javadoc-plugin</maven.javadoc.artifactID>
 		<maven.source.artifactID>maven-source-plugin</maven.source.artifactID>
 		<maven.surefire.artifactID>maven-surefire-plugin</maven.surefire.artifactID>
+		<maven.jar.artifactID>maven-jar-plugin</maven.jar.artifactID>
 		
 		<!-- Other Plugin Info -->
 		<jacoco.groupID>org.jacoco</jacoco.groupID>
@@ -118,6 +120,21 @@
 					<artifactId>${maven.surefire.artifactID}</artifactId>
 					<version>${maven.surefire.version}</version>
 				</plugin>
+				<!-- Maven Jar Plugin -->
+				<plugin>
+					<artifactId>${maven.jar.artifactID}</artifactId>
+					<version>${maven.jar.version}</version>
+					<executions>
+						<execution>
+							<goals>
+								<goal>test-jar</goal>
+							</goals>
+							<configuration>
+								<skipIfEmpty>true</skipIfEmpty>
+							</configuration>
+						</execution>
+					</executions>
+				</plugin>
 				
 				<!-- Other Plugins -->
 				<!-- JaCoCo -->
@@ -162,6 +179,10 @@
 			</plugin>
 			<plugin>
 				<artifactId>${maven.javadoc.artifactID}</artifactId>
+				<inherited>true</inherited>
+			</plugin>
+			<plugin>
+				<artifactId>${maven.jar.artifactID}</artifactId>
 				<inherited>true</inherited>
 			</plugin>
 			<!-- JaCoCo for Code Coverage -->

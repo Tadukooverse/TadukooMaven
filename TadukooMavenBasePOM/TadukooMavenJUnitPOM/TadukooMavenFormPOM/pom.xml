@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.github.tadukoo.maven</groupId>
+		<artifactId>TadukooMavenJUnitPOM</artifactId>
+		<version>0.4-Alpha-SNAPSHOT</version>
+	</parent>
+	<artifactId>TadukooMavenFormPOM</artifactId>
+	<packaging>pom</packaging>
+	<modules>
+		<module>TadukooMavenEngineBasePOM</module>
+	</modules>
+	<properties>
+		<!-- Tadukoo Form Versions -->
+		<tadukoo.form.version>0.4-Alpha</tadukoo.form.version>
+		<tadukoo.form.formfields.version>${tadukoo.form.version}</tadukoo.form.formfields.version>
+		<tadukoo.form.form.version>${tadukoo.form.version}</tadukoo.form.form.version>
+		<tadukoo.form.formcomponents.version>${tadukoo.form.version}</tadukoo.form.formcomponents.version>
+		
+		<!-- Tadukoo Form Info -->
+		<tadukoo.form.groupID>com.github.tadukoo.form</tadukoo.form.groupID>
+		<tadukoo.form.formfields.artifactID>TadukooFormFields</tadukoo.form.formfields.artifactID>
+		<tadukoo.form.form.artifactID>TadukooForm</tadukoo.form.form.artifactID>
+		<tadukoo.form.formcomponents.artifactID>TadukooFormComponents</tadukoo.form.formcomponents.artifactID>
+	</properties>
+	<dependencyManagement>
+		<dependencies>
+			<!-- Tadukoo Form Fields -->
+			<dependency>
+				<groupId>${tadukoo.form.groupID}</groupId>
+				<artifactId>${tadukoo.form.formfields.artifactID}</artifactId>
+				<version>${tadukoo.form.formfields.version}</version>
+			</dependency>
+			<!-- Tadukoo Form -->
+			<dependency>
+				<groupId>${tadukoo.form.groupID}</groupId>
+				<artifactId>${tadukoo.form.form.artifactID}</artifactId>
+				<version>${tadukoo.form.form.version}</version>
+			</dependency>
+			<!-- Tadukoo Form Components -->
+			<dependency>
+				<groupId>${tadukoo.form.groupID}</groupId>
+				<artifactId>${tadukoo.form.formcomponents.artifactID}</artifactId>
+				<version>${tadukoo.form.formcomponents.version}</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+</project>
