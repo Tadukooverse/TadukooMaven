@@ -6,7 +6,7 @@
 	<parent>
 		<groupId>com.github.tadukoo.maven</groupId>
 		<artifactId>TadukooMavenJUnitPOM</artifactId>
-		<version>0.4-Alpha</version>
+		<version>0.4.1-Alpha</version>
 	</parent>
 	<artifactId>TadukooMavenFormPOM</artifactId>
 	<packaging>pom</packaging>
@@ -21,7 +21,7 @@
 		<tadukoo.form.formcomponents.version>${tadukoo.form.version}</tadukoo.form.formcomponents.version>
 		
 		<!-- Tadukoo Form Info -->
-		<tadukoo.form.groupID>com.github.tadukoo.form</tadukoo.form.groupID>
+		<tadukoo.form.groupID>com.github.tadukoo.view.form</tadukoo.form.groupID>
 		<tadukoo.form.formfields.artifactID>TadukooFormFields</tadukoo.form.formfields.artifactID>
 		<tadukoo.form.form.artifactID>TadukooForm</tadukoo.form.form.artifactID>
 		<tadukoo.form.formcomponents.artifactID>TadukooFormComponents</tadukoo.form.formcomponents.artifactID>
