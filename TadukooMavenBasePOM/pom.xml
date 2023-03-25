@@ -6,16 +6,12 @@
 	<parent>
 		<groupId>com.github.tadukoo.maven</groupId>
 		<artifactId>TadukooMavenParent</artifactId>
-		<version>0.3.1-Alpha</version>
+		<version>0.4-Alpha</version>
 	</parent>
 	<artifactId>TadukooMavenBasePOM</artifactId>
 	<packaging>pom</packaging>
 	<modules>
-		<module>TadukooMavenLibraryPOM</module>
-		<module>TadukooMavenParsingPOM</module>
-		<module>TadukooMavenWebServicePOM</module>
-		<module>TadukooMavenViewPOM</module>
-		<module>TadukooMavenProgramPOM</module>
+		<module>TadukooMavenJUnitPOM</module>
 	</modules>
 	<properties>
 		<!-- Directories -->
@@ -36,14 +32,11 @@
 		<maven.source.version>3.2.1</maven.source.version>
 		<!-- Note: 3.0.0-M5 has an issue where it doesn't run JUnit tests, hence using M4 -->
 		<maven.surefire.version>3.0.0-M4</maven.surefire.version>
+		<maven.jar.version>3.3.0</maven.jar.version>
 		
 		<!-- Other Plugin Versions -->
 		<jacoco.version>0.8.7</jacoco.version>
 		<nexus-staging.version>1.6.8</nexus-staging.version>
-		
-		<!-- Tadukoo JUnit Versions -->
-		<tadukoo.junit.version>0.1.1-Alpha</tadukoo.junit.version>
-		<tadukoo.junit.junit.version>${tadukoo.junit.version}</tadukoo.junit.junit.version>
 		
 		<!-- JUnit Info -->
 		<junit.jupiter.groupID>org.junit.jupiter</junit.jupiter.groupID>
@@ -56,16 +49,13 @@
 		<maven.javadoc.artifactID>maven-javadoc-plugin</maven.javadoc.artifactID>
 		<maven.source.artifactID>maven-source-plugin</maven.source.artifactID>
 		<maven.surefire.artifactID>maven-surefire-plugin</maven.surefire.artifactID>
+		<maven.jar.artifactID>maven-jar-plugin</maven.jar.artifactID>
 		
 		<!-- Other Plugin Info -->
 		<jacoco.groupID>org.jacoco</jacoco.groupID>
 		<jacoco.artifactID>jacoco-maven-plugin</jacoco.artifactID>
 		<nexus-staging.groupID>org.sonatype.plugins</nexus-staging.groupID>
 		<nexus-staging.artifactID>nexus-staging-maven-plugin</nexus-staging.artifactID>
-		
-		<!-- Tadukoo JUnit Info -->
-		<tadukoo.junit.groupID>com.github.tadukoo.junit</tadukoo.junit.groupID>
-		<tadukoo.junit.junit.artifactID>TadukooJUnit</tadukoo.junit.junit.artifactID>
 	</properties>
 	<dependencyManagement>
 		<dependencies>
@@ -80,13 +70,6 @@
 				<groupId>${junit.platform.groupID}</groupId>
 				<artifactId>${junit.platform.artifactID}</artifactId>
 				<version>${junit.platform.version}</version>
-				<scope>test</scope>
-			</dependency>
-			<!-- Tadukoo JUnit Dependencies -->
-			<dependency>
-				<groupId>${tadukoo.junit.groupID}</groupId>
-				<artifactId>${tadukoo.junit.junit.artifactID}</artifactId>
-				<version>${tadukoo.junit.junit.version}</version>
 				<scope>test</scope>
 			</dependency>
 		</dependencies>
@@ -137,6 +120,21 @@
 					<artifactId>${maven.surefire.artifactID}</artifactId>
 					<version>${maven.surefire.version}</version>
 				</plugin>
+				<!-- Maven Jar Plugin -->
+				<plugin>
+					<artifactId>${maven.jar.artifactID}</artifactId>
+					<version>${maven.jar.version}</version>
+					<executions>
+						<execution>
+							<goals>
+								<goal>test-jar</goal>
+							</goals>
+							<configuration>
+								<skipIfEmpty>true</skipIfEmpty>
+							</configuration>
+						</execution>
+					</executions>
+				</plugin>
 				
 				<!-- Other Plugins -->
 				<!-- JaCoCo -->
@@ -181,6 +179,10 @@
 			</plugin>
 			<plugin>
 				<artifactId>${maven.javadoc.artifactID}</artifactId>
+				<inherited>true</inherited>
+			</plugin>
+			<plugin>
+				<artifactId>${maven.jar.artifactID}</artifactId>
 				<inherited>true</inherited>
 			</plugin>
 			<!-- JaCoCo for Code Coverage -->

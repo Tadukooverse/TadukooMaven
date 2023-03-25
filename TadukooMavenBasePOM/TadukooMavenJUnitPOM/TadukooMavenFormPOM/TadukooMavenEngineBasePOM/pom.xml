@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.github.tadukoo.maven</groupId>
+		<artifactId>TadukooMavenFormPOM</artifactId>
+		<version>0.4-Alpha</version>
+	</parent>
+	<artifactId>TadukooMavenEngineBasePOM</artifactId>
+	<packaging>pom</packaging>
+	<properties>
+		<!-- Tadukoo Base Versions -->
+		<tadukoo.lookandfeel.version>0.4-Alpha</tadukoo.lookandfeel.version>
+		<tadukoo.github.version>0.1.4-Alpha</tadukoo.github.version>
+		
+		<!-- Tadukoo Look & Feel Versions -->
+		<tadukoo.lookandfeel.lookandfeel.version>${tadukoo.lookandfeel.version}</tadukoo.lookandfeel.lookandfeel.version>
+		
+		<!-- Tadukoo GitHub Versions -->
+		<tadukoo.github.github.version>${tadukoo.github.version}</tadukoo.github.github.version>
+		
+		<!-- Tadukoo Look & Feel Info -->
+		<tadukoo.lookandfeel.groupID>com.github.tadukoo.view.lookandfeel</tadukoo.lookandfeel.groupID>
+		<tadukoo.lookandfeel.lookandfeel.artifactID>TadukooLookAndFeel</tadukoo.lookandfeel.lookandfeel.artifactID>
+		
+		<!-- Tadukoo GitHub Info -->
+		<tadukoo.github.groupID>com.github.tadukoo.github</tadukoo.github.groupID>
+		<tadukoo.github.github.artifactID>TadukooGitHub</tadukoo.github.github.artifactID>
+	</properties>
+	<dependencyManagement>
+		<dependencies>
+			<!-- Tadukoo Look & Feel -->
+			<dependency>
+				<groupId>${tadukoo.lookandfeel.groupID}</groupId>
+				<artifactId>${tadukoo.lookandfeel.lookandfeel.artifactID}</artifactId>
+				<version>${tadukoo.lookandfeel.lookandfeel.version}</version>
+			</dependency>
+			<!-- Tadukoo GitHub -->
+			<dependency>
+				<groupId>${tadukoo.github.groupID}</groupId>
+				<artifactId>${tadukoo.github.github.artifactID}</artifactId>
+				<version>${tadukoo.github.github.version}</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+</project>
