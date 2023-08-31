@@ -6,6 +6,7 @@ Maven poms and archetypes for Tadukooverse projects.
     * [Tadukoo Maven Base POM](#tadukoo-maven-base-pom)
       * [Tadukoo Maven JUnit POM](#tadukoo-maven-junit-pom)
         * [Tadukoo Maven Library POM](#tadukoo-maven-library-pom)
+          * [Tadukoo Maven Plugin POM](#tadukoo-maven-plugin-pom)
         * [Tadukoo Maven Parsing POM](#tadukoo-maven-parsing-pom)
         * [Tadukoo Maven Web Service POM](#tadukoo-maven-web-service-pom)
         * [Tadukoo Maven View POM](#tadukoo-maven-view-pom)
@@ -27,6 +28,11 @@ to your needs.
 Tadukoo Maven Library POM is the base POM to be used by libraries in Tadukooverse.
 It extends Tadukoo Maven JUnit POM, providing the dependencies for 
 [Tadukoo Util](https://tadukooverse.github.io/projects/TadukooUtil.html).
+
+###### Tadukoo Maven Plugin POM
+Tadukoo Maven Plugin POM is the base POM to be used by libraries that are creating 
+Maven plugins. It extends Tadukoo Maven Library POM, and provides the dependencies 
+used for making Maven plugins.
 
 ##### Tadukoo Maven Parsing POM
 Tadukoo Maven Parsing POM is the base POM to be used by parsing libraries in 

@@ -6,10 +6,13 @@
 	<parent>
 		<artifactId>TadukooMavenJUnitPOM</artifactId>
 		<groupId>com.github.tadukoo.maven</groupId>
-		<version>0.4.1-Alpha</version>
+		<version>0.4.2-Alpha</version>
 	</parent>
 	<artifactId>TadukooMavenLibraryPOM</artifactId>
 	<packaging>pom</packaging>
+	<modules>
+		<module>TadukooMavenPluginPOM</module>
+	</modules>
 	<properties>
 		<!-- Tadukoo Util Versions -->
 		<tadukoo.util.functions.version>${tadukoo.util.version}</tadukoo.util.functions.version>

@@ -6,7 +6,7 @@
 	<parent>
 		<groupId>com.github.tadukoo.maven</groupId>
 		<artifactId>TadukooMavenParent</artifactId>
-		<version>0.4.1-Alpha</version>
+		<version>0.4.2-Alpha</version>
 	</parent>
 	<artifactId>TadukooMavenBasePOM</artifactId>
 	<packaging>pom</packaging>
@@ -34,8 +34,11 @@
 		<maven.surefire.version>3.0.0-M4</maven.surefire.version>
 		<maven.jar.version>3.3.0</maven.jar.version>
 		
+		<!-- Maven Plugin Settings -->
+		<maven.compiler.release>${java.version}</maven.compiler.release>
+		
 		<!-- Other Plugin Versions -->
-		<jacoco.version>0.8.7</jacoco.version>
+		<jacoco.version>0.8.10</jacoco.version>
 		<nexus-staging.version>1.6.8</nexus-staging.version>
 		
 		<!-- JUnit Info -->
@@ -75,6 +78,13 @@
 		</dependencies>
 	</dependencyManagement>
 	<build>
+		<sourceDirectory>${directory.source}</sourceDirectory>
+		<testSourceDirectory>${directory.test}</testSourceDirectory>
+		<testResources>
+			<testResource>
+				<directory>${directory.test-resource}</directory>
+			</testResource>
+		</testResources>
 		<pluginManagement>
 			<plugins>
 				<!-- Maven Plugins -->
@@ -82,9 +92,6 @@
 				<plugin>
 					<artifactId>${maven.compiler.artifactID}</artifactId>
 					<version>${maven.compiler.version}</version>
-					<configuration>
-						<release>${java.version}</release>
-					</configuration>
 				</plugin>
 				<!-- Maven Javadoc Plugin -->
 				<plugin>
@@ -173,6 +180,10 @@
 		</pluginManagement>
 		<plugins>
 			<!-- Maven Plugins -->
+			<plugin>
+				<artifactId>${maven.compiler.artifactID}</artifactId>
+				<inherited>true</inherited>
+			</plugin>
 			<plugin>
 				<artifactId>${maven.source.artifactID}</artifactId>
 				<inherited>true</inherited>
