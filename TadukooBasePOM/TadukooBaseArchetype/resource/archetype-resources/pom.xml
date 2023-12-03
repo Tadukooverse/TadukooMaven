@@ -14,7 +14,6 @@
 	<properties>
 		<!-- Info -->
 		<shortName>${shortName}</shortName>
-		<tadukoo.util.version>${tadukooUtilVersion}</tadukoo.util.version>
 	</properties>
 	<modules>
 		<module>${moduleArtifactID}</module>
