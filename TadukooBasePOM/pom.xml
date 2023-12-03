@@ -8,10 +8,11 @@
 		<artifactId>TadukooMavenParent</artifactId>
 		<version>0.5-Beta-SNAPSHOT</version>
 	</parent>
-	<artifactId>TadukooMavenBasePOM</artifactId>
+	<artifactId>TadukooBasePOM</artifactId>
 	<packaging>pom</packaging>
 	<modules>
-		<module>TadukooMavenJUnitPOM</module>
+		<module>TadukooBaseArchetype</module>
+		<module>TadukooJUnitPOM</module>
 	</modules>
 	<properties>
 		<!-- Directories -->
@@ -33,6 +34,9 @@
 		<!-- Note: 3.0.0-M5 has an issue where it doesn't run JUnit tests, hence using M4 -->
 		<maven.surefire.version>3.0.0-M4</maven.surefire.version>
 		<maven.jar.version>3.3.0</maven.jar.version>
+		<maven.archetype.version>3.2.1</maven.archetype.version>
+		<maven.archetype-packaging-version>3.2.1</maven.archetype-packaging-version>
+		<maven.resources.version>3.3.1</maven.resources.version>
 		
 		<!-- Maven Plugin Settings -->
 		<maven.compiler.release>${java.version}</maven.compiler.release>
@@ -53,6 +57,10 @@
 		<maven.source.artifactID>maven-source-plugin</maven.source.artifactID>
 		<maven.surefire.artifactID>maven-surefire-plugin</maven.surefire.artifactID>
 		<maven.jar.artifactID>maven-jar-plugin</maven.jar.artifactID>
+		<maven.archetype.artifactID>maven-archetype-plugin</maven.archetype.artifactID>
+		<maven.archetype-packaging.groupID>org.apache.maven.archetype</maven.archetype-packaging.groupID>
+		<maven.archetype-packaging.artifactID>archetype-packaging</maven.archetype-packaging.artifactID>
+		<maven.resources.artifactID>maven-resources-plugin</maven.resources.artifactID>
 		
 		<!-- Other Plugin Info -->
 		<jacoco.groupID>org.jacoco</jacoco.groupID>
@@ -80,6 +88,11 @@
 	<build>
 		<sourceDirectory>${directory.source}</sourceDirectory>
 		<testSourceDirectory>${directory.test}</testSourceDirectory>
+		<resources>
+			<resource>
+				<directory>${directory.resource}</directory>
+			</resource>
+		</resources>
 		<testResources>
 			<testResource>
 				<directory>${directory.test-resource}</directory>

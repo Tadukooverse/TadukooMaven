@@ -5,10 +5,10 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>com.github.tadukoo.maven</groupId>
-		<artifactId>TadukooMavenJUnitPOM</artifactId>
+		<artifactId>TadukooJUnitPOM</artifactId>
 		<version>0.5-Beta-SNAPSHOT</version>
 	</parent>
-	<artifactId>TadukooMavenViewPOM</artifactId>
+	<artifactId>TadukooViewPOM</artifactId>
 	<packaging>pom</packaging>
 	<properties>
 		<!-- Tadukoo View Versions -->
