@@ -6,10 +6,11 @@
 		name="TadukooBaseArchetype">
 	<requiredProperties>
 		<requiredProperty key="moduleArtifactID"/>
-		<requiredProperty key="description"/>
-		<requiredProperty key="shortName"/>
-		<requiredProperty key="tadukooUtilVersion">
-			<defaultValue>0.6-Beta</defaultValue>
+		<requiredProperty key="description">
+			<defaultValue>Some description of your project</defaultValue>
+		</requiredProperty>
+		<requiredProperty key="shortName">
+			<defaultValue>A short name for your project</defaultValue>
 		</requiredProperty>
 	</requiredProperties>
 	<fileSets>

@@ -1,0 +1,45 @@
+<archetype-descriptor
+		xmlns="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.1.0"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.1.0
+		https://maven.apache.org/xsd/archetype-descriptor-1.1.0.xsd"
+		name="TadukooBaseArchetype">
+	<requiredProperties>
+		<requiredProperty key="moduleArtifactID"/>
+		<requiredProperty key="description">
+			<defaultValue>Some description of your project</defaultValue>
+		</requiredProperty>
+		<requiredProperty key="shortName">
+			<defaultValue>A short name for your project</defaultValue>
+		</requiredProperty>
+		<requiredProperty key="tadukooUtilVersion">
+			<defaultValue>0.6-Beta</defaultValue>
+		</requiredProperty>
+	</requiredProperties>
+	<fileSets>
+		<fileSet>
+			<directory/>
+			<includes>
+				<include>*</include>
+			</includes>
+		</fileSet>
+	</fileSets>
+	<modules>
+		<module id="${moduleArtifactID}" dir="__moduleArtifactID__" name="${moduleArtifactID}">
+			<fileSets>
+				<fileSet filtered="true" packaged="true">
+					<directory>src</directory>
+				</fileSet>
+				<fileSet>
+					<directory>junit</directory>
+				</fileSet>
+				<fileSet>
+					<directory>resource</directory>
+				</fileSet>
+				<fileSet>
+					<directory>junit-resource</directory>
+				</fileSet>
+			</fileSets>
+		</module>
+	</modules>
+</archetype-descriptor>

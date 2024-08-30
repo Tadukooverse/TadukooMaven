@@ -52,6 +52,20 @@
 		<junit.platform.artifactID>junit-platform-runner</junit.platform.artifactID>
 		
 		<!-- Maven Info -->
+		<maven.groupID>org.apache.maven</maven.groupID>
+		<maven.pluginapi.artifactID>maven-plugin-api</maven.pluginapi.artifactID>
+		<maven.pluginannotations.groupID>org.apache.maven.plugin-tools</maven.pluginannotations.groupID>
+		<maven.pluginannotations.artifactID>maven-plugin-annotations</maven.pluginannotations.artifactID>
+		<maven.project.artifactID>maven-project</maven.project.artifactID>
+		<maven.plugin.plugin.artifactID>maven-plugin-plugin</maven.plugin.plugin.artifactID>
+		
+		<!-- Versions -->
+		<maven.pluginapi.version>3.8.1</maven.pluginapi.version>
+		<maven.pluginannotations.version>3.8.1</maven.pluginannotations.version>
+		<maven.project.version>2.2.1</maven.project.version>
+		<maven.plugin.plugin.version>3.8.1</maven.plugin.plugin.version>
+		
+		<!-- Maven Plugins Info -->
 		<maven.compiler.artifactID>maven-compiler-plugin</maven.compiler.artifactID>
 		<maven.javadoc.artifactID>maven-javadoc-plugin</maven.javadoc.artifactID>
 		<maven.source.artifactID>maven-source-plugin</maven.source.artifactID>
@@ -82,6 +96,24 @@
 				<artifactId>${junit.platform.artifactID}</artifactId>
 				<version>${junit.platform.version}</version>
 				<scope>test</scope>
+			</dependency>
+			<!-- Maven Plugin API -->
+			<dependency>
+				<groupId>${maven.groupID}</groupId>
+				<artifactId>${maven.pluginapi.artifactID}</artifactId>
+				<version>${maven.pluginapi.version}</version>
+			</dependency>
+			<!-- Maven Plugin Annotations -->
+			<dependency>
+				<groupId>${maven.pluginannotations.groupID}</groupId>
+				<artifactId>${maven.pluginannotations.artifactID}</artifactId>
+				<version>${maven.pluginannotations.version}</version>
+			</dependency>
+			<!-- Maven Project -->
+			<dependency>
+				<groupId>${maven.groupID}</groupId>
+				<artifactId>${maven.project.artifactID}</artifactId>
+				<version>${maven.project.version}</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
@@ -207,6 +239,12 @@
 			</plugin>
 			<plugin>
 				<artifactId>${maven.jar.artifactID}</artifactId>
+				<inherited>true</inherited>
+			</plugin>
+			<!-- Maven Plugin Plugin -->
+			<plugin>
+				<artifactId>${maven.plugin.plugin.artifactID}</artifactId>
+				<version>${maven.plugin.plugin.version}</version>
 				<inherited>true</inherited>
 			</plugin>
 			<!-- JaCoCo for Code Coverage -->

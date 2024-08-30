@@ -10,6 +10,9 @@
 	</parent>
 	<artifactId>TadukooProgramPOM</artifactId>
 	<packaging>pom</packaging>
+	<modules>
+		<module>TadukooProgramArchetype</module>
+	</modules>
 	<properties>
 		<!-- Tadukoo Engine Versions -->
 		<tadukoo.engine.version>0.1-Alpha</tadukoo.engine.version>
@@ -21,7 +24,7 @@
 	</properties>
 	<dependencyManagement>
 		<dependencies>
-			<!-- TadukooEngine Dependency -->
+			<!-- Tadukoo Engine Dependency -->
 			<dependency>
 				<groupId>${tadukoo.engine.groupID}</groupId>
 				<artifactId>${tadukoo.engine.engine.artifactID}</artifactId>

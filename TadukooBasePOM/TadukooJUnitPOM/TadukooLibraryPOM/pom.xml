@@ -11,38 +11,34 @@
 	<artifactId>TadukooLibraryPOM</artifactId>
 	<packaging>pom</packaging>
 	<modules>
-		<module>TadukooMavenPluginPOM</module>
+		<module>TadukooLibraryArchetype</module>
 	</modules>
 	<properties>
-		<!-- Tadukoo Util Versions -->
-		<tadukoo.util.functions.version>${tadukoo.util.version}</tadukoo.util.functions.version>
-		<tadukoo.util.lang.version>${tadukoo.util.version}</tadukoo.util.lang.version>
-		<tadukoo.util.util.version>${tadukoo.util.version}</tadukoo.util.util.version>
+		<!-- Ultimate Power Versions -->
+		<tadukoo.ultimatepower.version>0.3-Alpha-SNAPSHOT</tadukoo.ultimatepower.version>
+		<tadukoo.ultimatepower.annotationprocessor.version>${tadukoo.ultimatepower.version}</tadukoo.ultimatepower.annotationprocessor.version>
+		<tadukoo.ultimatepower.ultimatepower.version>${tadukoo.ultimatepower.version}</tadukoo.ultimatepower.ultimatepower.version>
+		<tadukoo.ultimatepower.maven.version>${tadukoo.ultimatepower.version}</tadukoo.ultimatepower.maven.version>
 		
-		<!-- Tadukoo Util Info -->
-		<tadukoo.util.functions.artifactID>TadukooFunctions</tadukoo.util.functions.artifactID>
-		<tadukoo.util.lang.artifactID>TadukooLang</tadukoo.util.lang.artifactID>
-		<tadukoo.util.util.artifactID>TadukooUtil</tadukoo.util.util.artifactID>
+		<!-- Ultimate Power Info -->
+		<tadukoo.ultimatepower.groupID>com.github.tadukoo.ultimatepower</tadukoo.ultimatepower.groupID>
+		<tadukoo.ultimatepower.annotationprocessor.artifactID>UltimatePowerAnnotationProcessor</tadukoo.ultimatepower.annotationprocessor.artifactID>
+		<tadukoo.ultimatepower.ultimatepower.artifactID>UltimatePower</tadukoo.ultimatepower.ultimatepower.artifactID>
+		<tadukoo.ultimatepower.maven.artifactID>UltimatePowerMavenPlugin</tadukoo.ultimatepower.maven.artifactID>
 	</properties>
 	<dependencyManagement>
 		<dependencies>
-			<!-- Tadukoo Functions -->
+			<!-- Ultimate Power Annotation Processor -->
 			<dependency>
-				<groupId>${tadukoo.util.groupID}</groupId>
-				<artifactId>${tadukoo.util.functions.artifactID}</artifactId>
-				<version>${tadukoo.util.functions.version}</version>
+				<groupId>${tadukoo.ultimatepower.groupID}</groupId>
+				<artifactId>${tadukoo.ultimatepower.annotationprocessor.artifactID}</artifactId>
+				<version>${tadukoo.ultimatepower.annotationprocessor.version}</version>
 			</dependency>
-			<!-- Tadukoo Lang -->
+			<!-- Ultimate Power -->
 			<dependency>
-				<groupId>${tadukoo.util.groupID}</groupId>
-				<artifactId>${tadukoo.util.lang.artifactID}</artifactId>
-				<version>${tadukoo.util.lang.version}</version>
-			</dependency>
-			<!-- Tadukoo Util -->
-			<dependency>
-				<groupId>${tadukoo.util.groupID}</groupId>
-				<artifactId>${tadukoo.util.util.artifactID}</artifactId>
-				<version>${tadukoo.util.util.version}</version>
+				<groupId>${tadukoo.ultimatepower.groupID}</groupId>
+				<artifactId>${tadukoo.ultimatepower.ultimatepower.artifactID}</artifactId>
+				<version>${tadukoo.ultimatepower.ultimatepower.version}</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>

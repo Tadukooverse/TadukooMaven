@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.github.tadukoo.maven</groupId>
+		<artifactId>TadukooJUnitPOM</artifactId>
+		<version>0.5-Beta-SNAPSHOT</version>
+	</parent>
+	<artifactId>TadukooJavaPOM</artifactId>
+	<packaging>pom</packaging>
+	<modules>
+		<module>TadukooJavaArchetype</module>
+	</modules>
+	<properties>
+		<!-- Tadukoo Java Versions -->
+		<tadukoo.java.version>0.4-Alpha</tadukoo.java.version>
+		<tadukoo.java.java.version>${tadukoo.java.version}</tadukoo.java.java.version>
+		
+		<!-- Tadukoo Java Info -->
+		<tadukoo.java.groupID>com.github.tadukoo.java</tadukoo.java.groupID>
+		<tadukoo.java.java.artifactID>TadukooJava</tadukoo.java.java.artifactID>
+	</properties>
+	<dependencyManagement>
+		<dependencies>
+			<!-- Tadukoo Java -->
+			<dependency>
+				<groupId>${tadukoo.java.groupID}</groupId>
+				<artifactId>${tadukoo.java.java.artifactID}</artifactId>
+				<version>${tadukoo.java.java.version}</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+</project>

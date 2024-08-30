@@ -11,11 +11,14 @@
 	<artifactId>TadukooJUnitPOM</artifactId>
 	<packaging>pom</packaging>
 	<modules>
+		<module>TadukooJUnitArchetype</module>
+		<module>TadukooUtilPOM</module>
+		<module>TadukooJavaPOM</module>
 		<module>TadukooLibraryPOM</module>
-		<module>TadukooParsingPOM</module>
-		<module>TadukooWebServicePOM</module>
 		<module>TadukooViewPOM</module>
 		<module>TadukooFormPOM</module>
+		<module>TadukooParsingPOM</module>
+		<module>TadukooWebServicePOM</module>
 		<module>TadukooProgramPOM</module>
 	</modules>
 	<properties>

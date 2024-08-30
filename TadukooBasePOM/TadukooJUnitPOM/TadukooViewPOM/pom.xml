@@ -10,6 +10,9 @@
 	</parent>
 	<artifactId>TadukooViewPOM</artifactId>
 	<packaging>pom</packaging>
+	<modules>
+		<module>TadukooViewArchetype</module>
+	</modules>
 	<properties>
 		<!-- Tadukoo View Versions -->
 		<tadukoo.view.version>0.4-Alpha</tadukoo.view.version>
@@ -19,7 +22,7 @@
 		<!-- Tadukoo View Info -->
 		<tadukoo.view.groupID>com.github.tadukoo.view</tadukoo.view.groupID>
 		<tadukoo.view.components.artifactID>TadukooComponents</tadukoo.view.components.artifactID>
-		<tadukoo.view.view.aritfactID>TadukooView</tadukoo.view.view.aritfactID>
+		<tadukoo.view.view.artifactID>TadukooView</tadukoo.view.view.artifactID>
 	</properties>
 	<dependencyManagement>
 		<dependencies>
@@ -32,7 +35,7 @@
 			<!-- Tadukoo View -->
 			<dependency>
 				<groupId>${tadukoo.view.groupID}</groupId>
-				<artifactId>${tadukoo.view.view.aritfactID}</artifactId>
+				<artifactId>${tadukoo.view.view.artifactID}</artifactId>
 				<version>${tadukoo.view.view.version}</version>
 			</dependency>
 		</dependencies>
