@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.github.tadukoo.maven</groupId>
+		<artifactId>TadukooJUnitPOM</artifactId>
+		<version>0.5-Beta</version>
+	</parent>
+	<artifactId>TadukooWebServicePOM</artifactId>
+	<packaging>pom</packaging>
+	<modules>
+		<module>TadukooWebServiceArchetype</module>
+	</modules>
+	<properties>
+		<!-- Tadukoo Web Services Versions -->
+		<tadukoo.webservices.version>0.1.3-Alpha</tadukoo.webservices.version>
+		<tadukoo.webservices.rest.version>${tadukoo.webservices.version}</tadukoo.webservices.rest.version>
+		
+		<!-- Tadukoo Web Services Info -->
+		<tadukoo.webservices.groupID>com.github.tadukoo.web</tadukoo.webservices.groupID>
+		<tadukoo.webservices.rest.artifactID>TadukooREST</tadukoo.webservices.rest.artifactID>
+	</properties>
+	<dependencyManagement>
+		<dependencies>
+			<!-- Tadukoo REST -->
+			<dependency>
+				<groupId>${tadukoo.webservices.groupID}</groupId>
+				<artifactId>${tadukoo.webservices.rest.artifactID}</artifactId>
+				<version>${tadukoo.webservices.rest.version}</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+</project>

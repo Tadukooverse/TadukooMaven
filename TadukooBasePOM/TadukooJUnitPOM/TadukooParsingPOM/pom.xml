@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.github.tadukoo.maven</groupId>
+		<artifactId>TadukooJUnitPOM</artifactId>
+		<version>0.5-Beta</version>
+	</parent>
+	<artifactId>TadukooParsingPOM</artifactId>
+	<packaging>pom</packaging>
+	<modules>
+		<module>TadukooParsingArchetype</module>
+	</modules>
+	<properties>
+		<!-- Tadukoo Parsing Versions -->
+		<tadukoo.parsing.version>0.3.2-Alpha</tadukoo.parsing.version>
+		<tadukoo.parsing.parsing.version>${tadukoo.parsing.version}</tadukoo.parsing.parsing.version>
+		<tadukoo.parsing.json.version>${tadukoo.parsing.version}</tadukoo.parsing.json.version>
+		<tadukoo.parsing.fileformat.version>${tadukoo.parsing.version}</tadukoo.parsing.fileformat.version>
+		
+		<!-- Tadukoo Parsing Info -->
+		<tadukoo.parsing.groupID>com.github.tadukoo.parsing</tadukoo.parsing.groupID>
+		<tadukoo.parsing.parsing.artifactID>TadukooParsing</tadukoo.parsing.parsing.artifactID>
+		<tadukoo.parsing.json.artifactID>TadukooJSON</tadukoo.parsing.json.artifactID>
+		<tadukoo.parsing.fileformat.artifactID>TadukooFileFormat</tadukoo.parsing.fileformat.artifactID>
+	</properties>
+	<dependencyManagement>
+		<dependencies>
+			<!-- Tadukoo Parsing -->
+			<dependency>
+				<groupId>${tadukoo.parsing.groupID}</groupId>
+				<artifactId>${tadukoo.parsing.parsing.artifactID}</artifactId>
+				<version>${tadukoo.parsing.parsing.version}</version>
+			</dependency>
+			<!-- Tadukoo JSON -->
+			<dependency>
+				<groupId>${tadukoo.parsing.groupID}</groupId>
+				<artifactId>${tadukoo.parsing.json.artifactID}</artifactId>
+				<version>${tadukoo.parsing.json.version}</version>
+			</dependency>
+			<!-- Tadukoo File Format -->
+			<dependency>
+				<groupId>${tadukoo.parsing.groupID}</groupId>
+				<artifactId>${tadukoo.parsing.fileformat.artifactID}</artifactId>
+				<version>${tadukoo.parsing.fileformat.version}</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+</project>

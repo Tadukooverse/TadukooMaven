@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.github.tadukoo.maven</groupId>
+		<artifactId>TadukooBasePOM</artifactId>
+		<version>0.5-Beta</version>
+	</parent>
+	<artifactId>TadukooJUnitPOM</artifactId>
+	<packaging>pom</packaging>
+	<modules>
+		<module>TadukooJUnitArchetype</module>
+		<module>TadukooUtilPOM</module>
+		<module>TadukooJavaPOM</module>
+		<module>TadukooLibraryPOM</module>
+		<module>TadukooViewPOM</module>
+		<module>TadukooFormPOM</module>
+		<module>TadukooParsingPOM</module>
+		<module>TadukooWebServicePOM</module>
+		<module>TadukooProgramPOM</module>
+	</modules>
+	<properties>
+		<!-- Tadukoo Util Versions -->
+		<tadukoo.util.version>0.5.1-Beta</tadukoo.util.version>
+		<tadukoo.util.junit.version>${tadukoo.util.version}</tadukoo.util.junit.version>
+		
+		<!-- Tadukoo Util Info -->
+		<tadukoo.util.groupID>com.github.tadukoo.util</tadukoo.util.groupID>
+		<tadukoo.util.junit.artifactID>TadukooJUnit</tadukoo.util.junit.artifactID>
+	</properties>
+	<dependencyManagement>
+		<dependencies>
+			<!-- Tadukoo JUnit -->
+			<dependency>
+				<groupId>${tadukoo.util.groupID}</groupId>
+				<artifactId>${tadukoo.util.junit.artifactID}</artifactId>
+				<version>${tadukoo.util.junit.version}</version>
+				<scope>test</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+</project>

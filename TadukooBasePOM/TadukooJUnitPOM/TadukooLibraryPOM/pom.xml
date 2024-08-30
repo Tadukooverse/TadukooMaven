@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.github.tadukoo.maven</groupId>
+		<artifactId>TadukooJUnitPOM</artifactId>
+		<version>0.5-Beta</version>
+	</parent>
+	<artifactId>TadukooLibraryPOM</artifactId>
+	<packaging>pom</packaging>
+	<modules>
+		<module>TadukooLibraryArchetype</module>
+	</modules>
+	<properties>
+		<!-- Ultimate Power Versions -->
+		<tadukoo.ultimatepower.version>0.3-Alpha-SNAPSHOT</tadukoo.ultimatepower.version>
+		<tadukoo.ultimatepower.annotationprocessor.version>${tadukoo.ultimatepower.version}</tadukoo.ultimatepower.annotationprocessor.version>
+		<tadukoo.ultimatepower.ultimatepower.version>${tadukoo.ultimatepower.version}</tadukoo.ultimatepower.ultimatepower.version>
+		<tadukoo.ultimatepower.maven.version>${tadukoo.ultimatepower.version}</tadukoo.ultimatepower.maven.version>
+		
+		<!-- Ultimate Power Info -->
+		<tadukoo.ultimatepower.groupID>com.github.tadukoo.ultimatepower</tadukoo.ultimatepower.groupID>
+		<tadukoo.ultimatepower.annotationprocessor.artifactID>UltimatePowerAnnotationProcessor</tadukoo.ultimatepower.annotationprocessor.artifactID>
+		<tadukoo.ultimatepower.ultimatepower.artifactID>UltimatePower</tadukoo.ultimatepower.ultimatepower.artifactID>
+		<tadukoo.ultimatepower.maven.artifactID>UltimatePowerMavenPlugin</tadukoo.ultimatepower.maven.artifactID>
+	</properties>
+	<dependencyManagement>
+		<dependencies>
+			<!-- Ultimate Power Annotation Processor -->
+			<dependency>
+				<groupId>${tadukoo.ultimatepower.groupID}</groupId>
+				<artifactId>${tadukoo.ultimatepower.annotationprocessor.artifactID}</artifactId>
+				<version>${tadukoo.ultimatepower.annotationprocessor.version}</version>
+			</dependency>
+			<!-- Ultimate Power -->
+			<dependency>
+				<groupId>${tadukoo.ultimatepower.groupID}</groupId>
+				<artifactId>${tadukoo.ultimatepower.ultimatepower.artifactID}</artifactId>
+				<version>${tadukoo.ultimatepower.ultimatepower.version}</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+</project>

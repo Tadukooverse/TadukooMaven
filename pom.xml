@@ -6,13 +6,13 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.github.tadukoo.maven</groupId>
 	<artifactId>TadukooMavenParent</artifactId>
-	<version>0.4.2-Alpha</version>
+	<version>0.5-Beta</version>
 	<packaging>pom</packaging>
 	<name>${project.artifactId}</name>
 	<description>Maven poms and archetypes for Tadukooverse projects</description>
 	<url>${github.url.https}</url>
 	<modules>
-		<module>TadukooMavenBasePOM</module>
+		<module>TadukooBasePOM</module>
 	</modules>
 	<developers>
 		<developer>
@@ -55,12 +55,9 @@
 		<license.url>${github.url.https}/blob/master/LICENSE</license.url>
 		
 		<!-- Maven Versions -->
-		<maven.archetype-packaging-version>3.2.0</maven.archetype-packaging-version>
 		<maven.gpg.version>3.0.1</maven.gpg.version>
 		
 		<!-- Maven Info -->
-		<maven.archetype-packaging.groupID>org.apache.maven.archetype</maven.archetype-packaging.groupID>
-		<maven.archetype-packaging.artifactID>archetype-packaging</maven.archetype-packaging.artifactID>
 		<maven.gpg.artifactID>maven-gpg-plugin</maven.gpg.artifactID>
 	</properties>
 	<distributionManagement>
