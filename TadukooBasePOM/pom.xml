@@ -25,7 +25,6 @@
 		<!-- Java and JUnit Versions -->
 		<java.version>17</java.version>
 		<junit.jupiter.version>5.11.4</junit.jupiter.version>
-		<junit.platform.version>1.11.4</junit.platform.version>
 		
 		<!-- Maven Plugin Versions -->
 		<maven.compiler.version>3.13.0</maven.compiler.version>
@@ -51,8 +50,6 @@
 		<!-- JUnit Info -->
 		<junit.jupiter.groupID>org.junit.jupiter</junit.jupiter.groupID>
 		<junit.jupiter.artifactID>junit-jupiter</junit.jupiter.artifactID>
-		<junit.platform.groupID>org.junit.platform</junit.platform.groupID>
-		<junit.platform.artifactID>junit-platform-runner</junit.platform.artifactID>
 		
 		<!-- Maven Info -->
 		<maven.groupID>org.apache.maven</maven.groupID>
@@ -79,17 +76,11 @@
 	</properties>
 	<dependencyManagement>
 		<dependencies>
-			<!-- JUnit Dependencies -->
+			<!-- JUnit -->
 			<dependency>
 				<groupId>${junit.jupiter.groupID}</groupId>
 				<artifactId>${junit.jupiter.artifactID}</artifactId>
 				<version>${junit.jupiter.version}</version>
-				<scope>test</scope>
-			</dependency>
-			<dependency>
-				<groupId>${junit.platform.groupID}</groupId>
-				<artifactId>${junit.platform.artifactID}</artifactId>
-				<version>${junit.platform.version}</version>
 				<scope>test</scope>
 			</dependency>
 			<!-- Maven Plugin API -->
