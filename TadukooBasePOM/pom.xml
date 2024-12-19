@@ -157,9 +157,6 @@
 				<plugin>
 					<artifactId>${maven.surefire.artifactID}</artifactId>
 					<version>${maven.surefire.version}</version>
-					<configuration>
-						<testSourceDirectory>${directory.test}</testSourceDirectory>
-					</configuration>
 				</plugin>
 				<!-- Maven Jar Plugin -->
 				<plugin>
