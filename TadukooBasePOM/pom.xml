@@ -6,7 +6,7 @@
 	<parent>
 		<groupId>com.github.tadukoo.maven</groupId>
 		<artifactId>TadukooMavenParent</artifactId>
-		<version>0.5-Beta</version>
+		<version>0.5.1-Beta-SNAPSHOT</version>
 	</parent>
 	<artifactId>TadukooBasePOM</artifactId>
 	<packaging>pom</packaging>
@@ -24,48 +24,38 @@
 		
 		<!-- Java and JUnit Versions -->
 		<java.version>17</java.version>
-		<junit.jupiter.version>5.8.1</junit.jupiter.version>
-		<junit.platform.version>1.8.1</junit.platform.version>
+		<junit.jupiter.version>5.11.4</junit.jupiter.version>
+		<junit.platform.version>1.11.4</junit.platform.version>
 		
 		<!-- Maven Plugin Versions -->
-		<maven.compiler.version>3.8.1</maven.compiler.version>
-		<maven.javadoc.version>3.3.1</maven.javadoc.version>
-		<maven.source.version>3.2.1</maven.source.version>
-		<!-- Note: 3.0.0-M5 has an issue where it doesn't run JUnit tests, hence using M4 -->
-		<maven.surefire.version>3.0.0-M4</maven.surefire.version>
-		<maven.jar.version>3.3.0</maven.jar.version>
-		<maven.archetype.version>3.2.1</maven.archetype.version>
-		<maven.archetype-packaging-version>3.2.1</maven.archetype-packaging-version>
+		<maven.compiler.version>3.13.0</maven.compiler.version>
+		<maven.javadoc.version>3.11.2</maven.javadoc.version>
+		<maven.source.version>3.3.1</maven.source.version>
+		<maven.surefire.version>3.5.2</maven.surefire.version>
+		<maven.jar.version>3.4.2</maven.jar.version>
+		<maven.archetype.version>3.3.1</maven.archetype.version>
+		<maven.archetype-packaging-version>3.3.1</maven.archetype-packaging-version>
 		<maven.resources.version>3.3.1</maven.resources.version>
+		<maven.pluginapi.version>3.13.1</maven.pluginapi.version>
+		<maven.pluginannotations.version>3.13.1</maven.pluginannotations.version>
+		<maven.plugin.plugin.version>3.13.1</maven.plugin.plugin.version>
+		<maven.project.version>2.2.1</maven.project.version>
+		
+		<!-- Other Plugin Versions -->
+		<jacoco.version>0.8.12</jacoco.version>
+		<nexus-staging.version>1.7.0</nexus-staging.version>
 		
 		<!-- Maven Plugin Settings -->
 		<maven.compiler.release>${java.version}</maven.compiler.release>
 		
-		<!-- Other Plugin Versions -->
-		<jacoco.version>0.8.10</jacoco.version>
-		<nexus-staging.version>1.6.8</nexus-staging.version>
-		
 		<!-- JUnit Info -->
 		<junit.jupiter.groupID>org.junit.jupiter</junit.jupiter.groupID>
-		<junit.jupiter.artifactID>junit-jupiter-engine</junit.jupiter.artifactID>
+		<junit.jupiter.artifactID>junit-jupiter</junit.jupiter.artifactID>
 		<junit.platform.groupID>org.junit.platform</junit.platform.groupID>
 		<junit.platform.artifactID>junit-platform-runner</junit.platform.artifactID>
 		
 		<!-- Maven Info -->
 		<maven.groupID>org.apache.maven</maven.groupID>
-		<maven.pluginapi.artifactID>maven-plugin-api</maven.pluginapi.artifactID>
-		<maven.pluginannotations.groupID>org.apache.maven.plugin-tools</maven.pluginannotations.groupID>
-		<maven.pluginannotations.artifactID>maven-plugin-annotations</maven.pluginannotations.artifactID>
-		<maven.project.artifactID>maven-project</maven.project.artifactID>
-		<maven.plugin.plugin.artifactID>maven-plugin-plugin</maven.plugin.plugin.artifactID>
-		
-		<!-- Versions -->
-		<maven.pluginapi.version>3.8.1</maven.pluginapi.version>
-		<maven.pluginannotations.version>3.8.1</maven.pluginannotations.version>
-		<maven.project.version>2.2.1</maven.project.version>
-		<maven.plugin.plugin.version>3.8.1</maven.plugin.plugin.version>
-		
-		<!-- Maven Plugins Info -->
 		<maven.compiler.artifactID>maven-compiler-plugin</maven.compiler.artifactID>
 		<maven.javadoc.artifactID>maven-javadoc-plugin</maven.javadoc.artifactID>
 		<maven.source.artifactID>maven-source-plugin</maven.source.artifactID>
@@ -75,6 +65,11 @@
 		<maven.archetype-packaging.groupID>org.apache.maven.archetype</maven.archetype-packaging.groupID>
 		<maven.archetype-packaging.artifactID>archetype-packaging</maven.archetype-packaging.artifactID>
 		<maven.resources.artifactID>maven-resources-plugin</maven.resources.artifactID>
+		<maven.pluginapi.artifactID>maven-plugin-api</maven.pluginapi.artifactID>
+		<maven.pluginannotations.groupID>org.apache.maven.plugin-tools</maven.pluginannotations.groupID>
+		<maven.pluginannotations.artifactID>maven-plugin-annotations</maven.pluginannotations.artifactID>
+		<maven.plugin.plugin.artifactID>maven-plugin-plugin</maven.plugin.plugin.artifactID>
+		<maven.project.artifactID>maven-project</maven.project.artifactID>
 		
 		<!-- Other Plugin Info -->
 		<jacoco.groupID>org.jacoco</jacoco.groupID>
@@ -171,6 +166,9 @@
 				<plugin>
 					<artifactId>${maven.surefire.artifactID}</artifactId>
 					<version>${maven.surefire.version}</version>
+					<configuration>
+						<testSourceDirectory>${directory.test}</testSourceDirectory>
+					</configuration>
 				</plugin>
 				<!-- Maven Jar Plugin -->
 				<plugin>
