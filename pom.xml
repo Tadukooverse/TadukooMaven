@@ -6,7 +6,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.github.tadukoo.maven</groupId>
 	<artifactId>TadukooMavenParent</artifactId>
-	<version>0.5-Beta</version>
+	<version>0.5.1-Beta</version>
 	<packaging>pom</packaging>
 	<name>${project.artifactId}</name>
 	<description>Maven poms and archetypes for Tadukooverse projects</description>
