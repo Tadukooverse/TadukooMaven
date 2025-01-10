@@ -6,7 +6,7 @@
 	<parent>
 		<groupId>com.github.tadukoo.maven</groupId>
 		<artifactId>TadukooMavenParent</artifactId>
-		<version>0.5.1-Beta</version>
+		<version>0.5.2-Beta</version>
 	</parent>
 	<artifactId>TadukooBasePOM</artifactId>
 	<packaging>pom</packaging>
@@ -35,7 +35,7 @@
 		<maven.archetype.version>3.3.1</maven.archetype.version>
 		<maven.archetype-packaging-version>3.3.1</maven.archetype-packaging-version>
 		<maven.resources.version>3.3.1</maven.resources.version>
-		<maven.pluginapi.version>3.13.1</maven.pluginapi.version>
+		<maven.pluginapi.version>3.9.6</maven.pluginapi.version>
 		<maven.pluginannotations.version>3.13.1</maven.pluginannotations.version>
 		<maven.plugin.plugin.version>3.13.1</maven.plugin.plugin.version>
 		<maven.project.version>2.2.1</maven.project.version>
@@ -66,6 +66,7 @@
 		<maven.pluginannotations.groupID>org.apache.maven.plugin-tools</maven.pluginannotations.groupID>
 		<maven.pluginannotations.artifactID>maven-plugin-annotations</maven.pluginannotations.artifactID>
 		<maven.plugin.plugin.artifactID>maven-plugin-plugin</maven.plugin.plugin.artifactID>
+		<maven.plugin.plugin.goalPrefix>${project.artifactId}</maven.plugin.plugin.goalPrefix>
 		<maven.project.artifactID>maven-project</maven.project.artifactID>
 		
 		<!-- Other Plugin Info -->
@@ -231,6 +232,9 @@
 			<plugin>
 				<artifactId>${maven.plugin.plugin.artifactID}</artifactId>
 				<version>${maven.plugin.plugin.version}</version>
+				<configuration>
+					<goalPrefix>${maven.plugin.plugin.goalPrefix}</goalPrefix>
+				</configuration>
 				<inherited>true</inherited>
 			</plugin>
 			<!-- JaCoCo for Code Coverage -->
