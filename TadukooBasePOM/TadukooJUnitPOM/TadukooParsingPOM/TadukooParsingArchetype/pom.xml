@@ -6,7 +6,7 @@
 	<parent>
 		<groupId>com.github.tadukoo.maven</groupId>
 		<artifactId>TadukooParsingPOM</artifactId>
-		<version>0.5.2-Beta-SNAPSHOT</version>
+		<version>0.5.2-Beta</version>
 	</parent>
 	<artifactId>TadukooParsingArchetype</artifactId>
 	<packaging>maven-archetype</packaging>
