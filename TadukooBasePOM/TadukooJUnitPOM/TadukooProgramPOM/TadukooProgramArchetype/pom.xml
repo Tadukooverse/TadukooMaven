@@ -6,10 +6,11 @@
 	<parent>
 		<groupId>com.github.tadukoo.maven</groupId>
 		<artifactId>TadukooProgramPOM</artifactId>
-		<version>0.5.2-Beta</version>
+		<version>0.5.3-Beta</version>
 	</parent>
 	<artifactId>TadukooProgramArchetype</artifactId>
 	<packaging>maven-archetype</packaging>
+	<name>${project.artifactId}</name>
 	<build>
 		<plugins>
 			<plugin>

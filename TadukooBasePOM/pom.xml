@@ -6,10 +6,11 @@
 	<parent>
 		<groupId>com.github.tadukoo.maven</groupId>
 		<artifactId>TadukooMavenParent</artifactId>
-		<version>0.5.2-Beta</version>
+		<version>0.5.3-Beta</version>
 	</parent>
 	<artifactId>TadukooBasePOM</artifactId>
 	<packaging>pom</packaging>
+	<name>${project.artifactId}</name>
 	<modules>
 		<module>TadukooBaseArchetype</module>
 		<module>TadukooJUnitPOM</module>
@@ -42,7 +43,6 @@
 		
 		<!-- Other Plugin Versions -->
 		<jacoco.version>0.8.12</jacoco.version>
-		<nexus-staging.version>1.7.0</nexus-staging.version>
 		
 		<!-- Maven Plugin Settings -->
 		<maven.compiler.release>${java.version}</maven.compiler.release>
@@ -72,8 +72,6 @@
 		<!-- Other Plugin Info -->
 		<jacoco.groupID>org.jacoco</jacoco.groupID>
 		<jacoco.artifactID>jacoco-maven-plugin</jacoco.artifactID>
-		<nexus-staging.groupID>org.sonatype.plugins</nexus-staging.groupID>
-		<nexus-staging.artifactID>nexus-staging-maven-plugin</nexus-staging.artifactID>
 	</properties>
 	<dependencyManagement>
 		<dependencies>
@@ -195,18 +193,6 @@
 							</goals>
 						</execution>
 					</executions>
-				</plugin>
-				<!-- Nexus Staging -->
-				<plugin>
-					<groupId>${nexus-staging.groupID}</groupId>
-					<artifactId>${nexus-staging.artifactID}</artifactId>
-					<version>${nexus-staging.version}</version>
-					<extensions>true</extensions>
-					<configuration>
-						<serverId>ossrh</serverId>
-						<nexusUrl>https://oss.sonatype.org</nexusUrl>
-						<autoReleaseAfterClose>true</autoReleaseAfterClose>
-					</configuration>
 				</plugin>
 			</plugins>
 		</pluginManagement>

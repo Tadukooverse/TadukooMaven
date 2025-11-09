@@ -6,16 +6,17 @@
 	<parent>
 		<groupId>com.github.tadukoo.maven</groupId>
 		<artifactId>TadukooJUnitPOM</artifactId>
-		<version>0.5.2-Beta</version>
+		<version>0.5.3-Beta</version>
 	</parent>
 	<artifactId>TadukooLibraryPOM</artifactId>
 	<packaging>pom</packaging>
+	<name>${project.artifactId}</name>
 	<modules>
 		<module>TadukooLibraryArchetype</module>
 	</modules>
 	<properties>
 		<!-- Ultimate Power Versions -->
-		<tadukoo.ultimatepower.version>0.3-Alpha-SNAPSHOT</tadukoo.ultimatepower.version>
+		<tadukoo.ultimatepower.version>0.3-Alpha</tadukoo.ultimatepower.version>
 		<tadukoo.ultimatepower.annotationprocessor.version>${tadukoo.ultimatepower.version}</tadukoo.ultimatepower.annotationprocessor.version>
 		<tadukoo.ultimatepower.ultimatepower.version>${tadukoo.ultimatepower.version}</tadukoo.ultimatepower.ultimatepower.version>
 		<tadukoo.ultimatepower.maven.version>${tadukoo.ultimatepower.version}</tadukoo.ultimatepower.maven.version>

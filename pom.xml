@@ -6,7 +6,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.github.tadukoo.maven</groupId>
 	<artifactId>TadukooMavenParent</artifactId>
-	<version>0.5.2-Beta</version>
+	<version>0.5.3-Beta</version>
 	<packaging>pom</packaging>
 	<name>${project.artifactId}</name>
 	<description>Maven poms and archetypes for Tadukooverse projects</description>
@@ -57,17 +57,24 @@
 		<!-- Maven Versions -->
 		<maven.gpg.version>3.0.1</maven.gpg.version>
 		
+		<!-- Staging Plugin Version -->
+		<nexus-staging.version>0.9.0</nexus-staging.version>
+		
 		<!-- Maven Info -->
 		<maven.gpg.artifactID>maven-gpg-plugin</maven.gpg.artifactID>
+		
+		<!-- Staging Plugin Info -->
+		<nexus-staging.groupID>org.sonatype.central</nexus-staging.groupID>
+		<nexus-staging.artifactID>central-publishing-maven-plugin</nexus-staging.artifactID>
 	</properties>
 	<distributionManagement>
 		<snapshotRepository>
-			<id>ossrh</id>
-			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
+			<id>central</id>
+			<url>https://central.sonatype.org/repository/maven-snapshots/</url>
 		</snapshotRepository>
 		<repository>
-			<id>ossrh</id>
-			<url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+			<id>central</id>
+			<url>https://central.sonatype.org</url>
 		</repository>
 	</distributionManagement>
 	<build>
@@ -91,6 +98,18 @@
 		<plugins>
 			<plugin>
 				<artifactId>${maven.gpg.artifactID}</artifactId>
+				<inherited>true</inherited>
+			</plugin>
+			
+			<!-- Nexus Staging -->
+			<plugin>
+				<groupId>${nexus-staging.groupID}</groupId>
+				<artifactId>${nexus-staging.artifactID}</artifactId>
+				<version>${nexus-staging.version}</version>
+				<extensions>true</extensions>
+				<configuration>
+					<publishingServerId>central</publishingServerId>
+				</configuration>
 				<inherited>true</inherited>
 			</plugin>
 		</plugins>
